@@ -1,0 +1,24 @@
+.hamburger-icon {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: blue;
+  position: relative;
+}
+.hamburger-icon::before,
+.hamburger-icon::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: blue;
+  position: absolute;
+  left: 0;
+  transition: 0.3s;
+}
+.hamburger-icon::before {
+  top: -8px;
+}
+.hamburger-icon::after {
+  top: 8px;
+}

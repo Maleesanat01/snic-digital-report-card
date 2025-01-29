@@ -1,0 +1,732 @@
+/*header section----------------------------------------------*/
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(21, 20, 65, 0.8);
+    padding: 10px;
+    color: white;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.card-header {
+    background-color: rgba(21, 20, 65, 0.9);
+    color: #fff;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    text-align: center;
+}
+
+.logo {
+    width: 140px; 
+    height: 100px; 
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.custom-footer {
+    background-color: rgba(21, 20, 65, 0.9); /* Change to your desired color */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 1rem; /* Adjust padding as needed */
+    color:white;
+}
+
+
+@media (max-width: 768px) {
+    .logo {
+        width: 100px; 
+        height: auto;  
+    }
+}
+
+.header-text {
+    padding-left: 25px;
+    text-align: left; 
+    flex-grow: 1; 
+}
+
+.header-text h2,
+.header-text h3 {
+    margin: 0; 
+}
+/*END header section----------------------------------------------*/
+
+/*pdf download*/
+.report-wrapper {
+    page-break-after: always;
+}
+
+
+
+/*Hamburger menu-------------------------------------------------*/
+    .hamburger-icon {
+        display: inline-block;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        position: relative;
+        transition: transform 0.3s;
+    }
+    .hamburger-icon::before,
+    .hamburger-icon::after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        transition: transform 0.3s;
+    }
+    .hamburger-icon::before {
+        top: -8px;
+    }
+    .hamburger-icon::after {
+        top: 8px;
+    }
+    .hamburger-icon.open {
+        background-color: transparent;
+    }
+    .hamburger-icon.open::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+    .hamburger-icon.open::after {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+/*END Hamburger menu-------------------------------------------------*/
+
+/*Dashboard buton styling-------------------------------------------*/
+.active-semester {
+    background-color: rgba(21, 20, 65, 0.9); /* Active tab color */
+    color: white; /* Text color for active tab */
+    outline: none;
+
+}
+
+.inactive-semester {
+    color: black; /* Text color for inactive tab */
+    outline: none;
+}
+
+.active-semester:hover {
+    background-color: rgba(32, 31, 95, 0.9); /* Background color */
+    color:white; 
+}
+
+.inactive-semester:hover {
+    background-color: rgba(241, 241, 241, 0.9); /* Different color for active state */
+color:rgba(21, 20, 65, 0.9); 
+}
+
+.nav-link {
+    outline: none; /* Removes the default outline */
+   
+}
+
+.nav-link:focus {
+    outline: none; /* Ensures no outline when the button is focused */
+    box-shadow: none; /* Removes any default box shadow */
+    color:white
+}
+
+
+.btn-nav {
+    background-color: rgba(255, 255, 255, 0.9); /* Background color */
+    color:rgba(21, 20, 65, 0.9);           /* Text color */
+    padding: 8px 15px;     /* Add padding */
+    border-radius: 5px;     /* Rounded corners */
+    border-color: rgba(21, 20, 65, 0.9); 
+    margin-bottom: 10px; 
+}
+
+.btn-nav:hover {
+    background-color: rgba(241, 241, 241, 0.9); /* Different color for active state */
+    color:rgba(21, 20, 65, 0.9); 
+}
+
+.btn-nav.active {
+    background-color: rgba(21, 20, 65, 0.9); /* Different color for active state */
+    color: white;            /* Text color for active state */
+}
+
+.btn-nav.active:hover {
+    background-color: rgba(32, 31, 95, 0.9); /* Background color */
+    color:white;           /* Text color */
+    padding: 8px 15px;     /* Add padding */
+    border-radius: 5px;     /* Rounded corners */
+    border-color: rgba(21, 20, 65, 0.9); 
+    margin-bottom: 10px;
+}
+
+.btn-danger{
+    padding: 8px 15px; 
+}
+
+/*create report btn*/
+.btn-custom {
+    align-items: left;
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: white;
+    background-color:rgba(21, 20, 65, 0.9);
+}
+
+.btn-custom:hover {
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: rgba(21, 20, 65, 0.9); /* Darker shade on hover */
+}
+
+.scrollable-section {
+    max-height: calc(100vh - 180px); /* Adjust for header/footer */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 1rem; /* Space for scrollbar */
+}
+
+ /*END Dashboard buton styling-------------------------------------------*/
+
+
+/*Login & Register styling--------------------------------------*/
+.reg-body{
+    background-image: url('/assets/classroom.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    height: auto;
+    display: flex; 
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+}
+
+.register-container {
+    padding-top: 150px; 
+    width: 100%; 
+    width: 100vw;
+    padding-bottom: 70px; 
+}
+
+@media (max-width: 768px) {
+    .register-container {
+        padding-top: 200px; 
+        padding-left: 30px; 
+        padding-right: 10px; 
+    }
+}
+
+.login-container {
+    background-image: url('C:/Users/HP/Project/digital-report-card/frontend-app/assets/lab.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    width: 100vw; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        padding-left: 30px; 
+        padding-right: 30px; 
+    }
+}
+
+/*Login & Register Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    width: 100%; 
+    max-width: 450px; 
+}
+/*END Login & Register styling--------------------------------------*/
+
+/*Edit & View report styling----------------------------------------*/
+.custom-outline-primary {
+    align-items: left;
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: rgba(21, 20, 65, 0.9);
+    background-color: transparent;
+}
+
+.custom-outline-primary:hover {
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white; 
+}
+
+.custom-outline-primary-sem{
+   margin-left: 610px;
+   margin-right: 15px;
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: rgba(21, 20, 65, 0.9); 
+    background-color: transparent;
+}
+
+.custom-outline-primary-sem:hover{
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white;
+}
+
+.save-btn{
+    align-items: right;
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white;
+}
+
+.save-btn:hover{
+    color: rgba(21, 20, 65, 0.9);
+    border-color: rgba(21, 20, 65, 0.9);
+    background-color: white;
+}
+
+.btn-spacing-pass{
+    margin-right:15px;
+    margin-left: 500px;
+}
+
+.btn-right-align {
+    margin-left: auto; 
+    margin-right: 20px; 
+}
+
+/*back button in edit report screen*/
+.btn-spacing {
+    margin-right:280px; /* Adjust the spacing as needed */
+}
+
+/*back button in view report teacher dashboard*/
+.custom-outline-primary-back {
+    align-items: right;
+    margin-left: 750px;
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: rgba(21, 20, 65, 0.9);
+    background-color: transparent;
+}
+
+.custom-outline-primary-back:hover {
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* For tablets and smaller screens */
+    .custom-outline-primary,
+    .custom-outline-primary-sem,
+    .custom-outline-primary-back,
+    .save-btn {
+        width: 100%; /* Make buttons full width */
+        margin: 5px 0; /* Add some vertical margin */
+    }
+
+    .btn-spacing-pass {
+        margin-right: 0; /* Remove margin-right for smaller screens */
+        margin-left: 0; /* Remove margin-left for smaller screens */
+    }
+
+    .d-flex {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align buttons to the start */
+    }
+}
+
+@media (max-width: 480px) { /* For mobile devices */
+    .custom-outline-primary-sem {
+        margin-left: 0; /* Remove margin-left for smaller screens */
+    }
+}
+/*END Edit & View report styling----------------------------------------*/
+
+/*Report card styling---------------------------------------------------*/
+.report-header-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.report-logo{
+    width: 140px; 
+    height: 100px; 
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.report-heading {
+    margin: 0; /* Remove default margins for tighter spacing */
+}
+
+.report-container {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.report-card-container {
+    width: 100%; 
+    max-width: 800px;
+    margin: auto; 
+    margin-top: 40px;
+    padding: 20px; /* You can adjust this as needed */
+    background: #f6f7fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow: visible; /* Ensure all content can be captured */
+}
+
+
+.report-details {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.detail-label {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+.detail-label span {
+    font-weight: bold;
+    color: rgba(21, 20, 65, 0.9);
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.report-table tfoot {
+    background-color: #eaecf1;
+}
+
+.report-table th {
+    background-color: rgba(21, 20, 65, 0.9);
+    color: white;
+    font-weight: bold;
+}
+
+/* Set specific widths for the columns */
+.report-table th:nth-child(1), 
+.report-table td:nth-child(1) {
+    width: 200px; 
+}
+
+.report-table th:nth-child(2), 
+.report-table td:nth-child(2) {
+    width: 200px;
+}
+
+.report-table th:nth-child(3), 
+.report-table td:nth-child(3) {
+    width: 200px; 
+}
+
+.report-table th:nth-child(4), /* Feedback column */
+.report-table td:nth-child(4) {
+    width: 200px; /* Set width for Feedback */
+}
+
+/*student report table*/
+.report-container-student {
+    page-break-inside: avoid; /* Prevent breaks within the report */
+}
+
+@media print {
+    .report-container-student {
+        page-break-after: always; /* Forces a break after each report */
+    }
+}
+
+
+.report-table-student {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report-table-student th,
+.report-table-student td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.report-table-student tfoot {
+    background-color: #eaecf1;
+}
+
+.report-table-student th {
+    background-color: rgba(21, 20, 65, 0.9);
+    color: white;
+    font-weight: bold;
+}
+
+/* Set specific widths for the columns */
+.report-table-student th:nth-child(1), 
+.report-table-student td:nth-child(1) {
+    width: 200px; 
+}
+
+.report-table-student th:nth-child(2), 
+.report-table-student td:nth-child(2) {
+    width: 200px;
+}
+
+.report-table-student th:nth-child(3), 
+.report-table-student td:nth-child(3) {
+    width: 200px; 
+}
+
+.report-table-student th:nth-child(4), /* Feedback column */
+.report-table-student td:nth-child(4) {
+    width: 200px; /* Set width for Feedback */
+}
+
+
+.average-percentage {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    color: #333;
+}
+
+.average-percentage span {
+    color: #003366;
+    font-weight: bold;
+}
+
+.loading {
+    text-align: center;
+    font-size: 20px;
+    color: #003366;
+}
+
+/* Responsive Styles for Mobile Screens */
+@media (max-width: 768px) {
+        .report-header-container {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+    
+        .report-logo {
+            margin: 0 0 10px 0; /* Center logo and add margin below it */
+        }
+    
+        .header-text {
+            align-items: center;
+        }
+
+        .header-text h3{
+        text-align: center;
+        margin-right: 30px;
+        }
+
+        .header-text h4{
+            padding-top: 4px;
+            text-align: center;
+            margin-right: 30px;
+            }
+
+    .report-card-container {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin-top: 20px; /* Adjust margin for smaller screens */
+        background-color: #f6f7fa; /* Ensure a consistent background */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: none; /* Remove shadow for a flatter look */
+    }
+
+    .report-details {
+        margin-bottom: 10px; /* Reduce spacing between details */
+        font-size: 16px; /* Adjust font size for readability */
+        text-align: center;
+    }
+
+    .report-table {
+        width: 100%; /* Full width */
+        border-collapse: collapse; /* Ensure no gaps */
+        margin-top: 10px; /* Adjust margin for the table */
+        margin-left: 25px;
+    }
+
+    .report-table th,
+    .report-table td {
+        padding: 10px; /* Adjust padding */
+        text-align: left; /* Align text to the left */
+        border: 1px solid #ddd; /* Keep borders for clarity */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+
+    .report-table th {
+        background-color: rgba(21, 20, 65, 0.9);
+        color: white;
+        font-weight: bold;
+    }
+
+    /* Stack cells vertically */
+    .report-table th, .report-table td {
+        display: block; /* Stack cells */
+        width: 100%; /* Full width */
+    }
+
+    .loading {
+        font-size: 18px; /* Slightly larger loading text */
+        margin: 10px; /* Add margin */
+    }
+
+    .report-table td:nth-child(1) {
+        background-color: #eaecf1; /* Change this color as needed */
+    }
+
+    .back-button {
+        width: 100%; /* Full width button */
+        padding: 12px; /* Increase padding */
+        font-size: 18px; /* Larger font for button */
+    }
+    .report-table th:nth-child(1),
+    .report-table td:nth-child(1),
+    .report-table th:nth-child(2),
+    .report-table td:nth-child(2),
+    .report-table th:nth-child(3),
+    .report-table td:nth-child(3),
+    .report-table th:nth-child(4),
+    .report-table td:nth-child(4) {
+        width: 320px; /* Set widths to auto */
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    /*student report table*/
+    .report-table-student {
+        width: 100%; /* Full width */
+        border-collapse: collapse; /* Ensure no gaps */
+        margin-top: 10px; /* Adjust margin for the table */
+    }
+
+    .report-table-student th,
+    .report-table-student td {
+        text-align: left; /* Align text to the left */
+        border: 1px solid #ddd; /* Keep borders for clarity */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+
+    .report-table-student th {
+        background-color: rgba(21, 20, 65, 0.9);
+        color: white;
+        font-weight: bold;
+    }
+
+    .report-table-student th, .report-table-student td {
+        display: block; /* Stack cells */
+        width: 100%; /* Full width */
+    }
+
+    
+    .report-table-student td:nth-child(1) {
+        background-color: #eaecf1; /* Change this color as needed */
+    }
+
+    .report-table-student th:nth-child(1),
+    .report-table-student td:nth-child(1),
+    .report-table-student th:nth-child(2),
+    .report-table-student td:nth-child(2),
+    .report-table-student th:nth-child(3),
+    .report-table-student td:nth-child(3),
+    .report-table-student th:nth-child(4),
+    .report-table-student td:nth-child(4) {
+        width: 320px; /* Set widths to auto */
+    }
+}
+
+/*seen by principal tag*/
+.seen-tag {
+    background-color: rgba(38, 144, 63, 0.9);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 25px; 
+    margin-bottom: 0px;
+    font-size: 0.95em;
+}
+
+.checkmark {
+    color: white; /* Set the text color to white */
+    font-size: 20px; /* Adjust the size as needed */
+    margin-right: 5px; /* Add some spacing if desired */
+}
+
+/*button container in principal view report*/
+.button-container {
+    display: flex; /* Enables flexbox layout */
+    justify-content: flex-start; /* Aligns buttons to the left */
+    gap: 20px; /* Adds space between the buttons */
+    padding-right: 140px; /* Adjusts the left padding to move buttons more to the left *
+    margin-top: 20px; /* Optional: Adds some top margin if needed */
+}
+
+/*pdf download button in student dashboard*/
+.button-student-container {
+    margin-right: 190px;
+    display: flex;
+    justify-content: flex-end; /* Aligns buttons to the right */
+    gap: 10px; /* Adds space between buttons */
+    margin-top: 20px;
+}
+
+.download-btn {
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white;
+}
+
+.download-btn:hover {
+    color: rgba(21, 20, 65, 0.9);
+    border-color: rgba(21, 20, 65, 0.9);
+    background-color: white;
+}
+
+.mark-as-seen {
+    border-color: rgba(21, 20, 65, 0.9); 
+    color: rgba(21, 20, 65, 0.9);
+    background-color: transparent;
+}
+
+.mark-as-seen:hover {
+    background-color: rgba(21, 20, 65, 0.9); 
+    color: white; 
+}
+
+
+/*END Report card styling---------------------------------------------------*/
