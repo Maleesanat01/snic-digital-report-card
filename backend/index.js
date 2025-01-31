@@ -10,29 +10,31 @@ const subjectRoutes = require('./routes/subjectRoutes');
 
 const app = express();
 
-// Enable CORS for your frontend domain
+// CORS configuration
 const corsOptions = {
-  origin: 'https://snic-digital-report-card-frontend-app.onrender.com', // Your frontend domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+  origin: 'https://snic-digital-report-card-frontend-app.onrender.com', // Frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-// Apply CORS middleware with the configured options
-app.use(cors(corsOptions));
+app.use(cors(corsOptions)); // Apply CORS middleware
+app.options('*', cors(corsOptions)); // Handle preflight OPTIONS requests
 
-app.use(express.json()); // To parse JSON request bodies
-app.use(bodyParser.json());
+app.use(express.json()); // Parse incoming JSON requests
+app.use(bodyParser.json()); // Parse JSON request bodies
 
 // Connect to the database
 connectDB();
 
+// Register routes
 app.use('/api/auth', authRoutes);
 app.use('/api/teachers', teacherRoutes);
 app.use('/api/students', studentRoutes);
 app.use('/api/reports', reportRoutes);
 app.use('/api/subjects', subjectRoutes);
 
+// Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
