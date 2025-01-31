@@ -10,13 +10,22 @@ const subjectRoutes = require('./routes/subjectRoutes');
 
 const app = express();
 
+// Enable CORS for your frontend domain
+const corsOptions = {
+  origin: 'https://snic-digital-report-card-frontend-app.onrender.com', // Your frontend domain
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed HTTP methods
+  allowedHeaders: ['Content-Type', 'Authorization'], // Allowed headers
+};
+
+// Apply CORS middleware with the configured options
+app.use(cors(corsOptions));
+
 app.use(express.json()); // To parse JSON request bodies
+app.use(bodyParser.json());
 
 // Connect to the database
 connectDB();
 
-app.use(cors());
-app.use(bodyParser.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/teachers', teacherRoutes);
 app.use('/api/students', studentRoutes);
