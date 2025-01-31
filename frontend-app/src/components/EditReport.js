@@ -3,7 +3,8 @@ import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import './styling.css';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
+
 const classes = [
     'LKG', 'UKG', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5',
     'Form 1', 'Form 2', 'Form 3', 'Form 4', 'Form 5',
