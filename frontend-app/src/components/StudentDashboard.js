@@ -19,7 +19,8 @@ const Dashboard = () => {
     const [selectedClass, setSelectedClass] = useState('');
     const [archiveFetched, setArchiveFetched] = useState(false);
     const studentId = sessionStorage.getItem('userId'); // Retrieve student ID from session storage
-    const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+   const API_BASE_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
+
 
     const classes = [
         'LKG', 'UKG', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5',
