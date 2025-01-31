@@ -1,6 +1,6 @@
 import axios from 'axios';
 //for http requests
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
 
 // export const registerTeacher = async (data) => {
 //     return await axios.post(`${API_URL}/teachers/register`, data);
