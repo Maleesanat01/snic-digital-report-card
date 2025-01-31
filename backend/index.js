@@ -1,13 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
+import express from 'express';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-const connectDB = require('./config/db');
-const teacherRoutes = require('./routes/teacherRoutes');
-const studentRoutes = require('./routes/studentRoutes');
-const reportRoutes = require('./routes/reportRoutes');
-const authRoutes = require('./routes/authRoutes'); 
-const subjectRoutes = require('./routes/subjectRoutes');
+import connectDB from './config/db.js';
+import teacherRoutes from './routes/teacherRoutes.js';
+import studentRoutes from './routes/studentRoutes.js';
+import reportRoutes from './routes/reportRoutes.js';
+import authRoutes from './routes/authRoutes.js';
+import subjectRoutes from './routes/subjectRoutes.js';
 
 dotenv.config();
 const app = express();
