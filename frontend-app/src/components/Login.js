@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styling.css';
 
 // Define the base API URL
-const API_BASE_URL = 'http://localhost:5000/api'; // Update this URL based on your environment
+const API_BASE_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
+ // Update this URL based on your environment
 
 const Login = () => {
     const [email, setEmail] = useState('');
