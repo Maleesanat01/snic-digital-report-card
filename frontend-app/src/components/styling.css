@@ -204,7 +204,7 @@ color:rgba(21, 20, 65, 0.9);
 
 /*Login & Register styling--------------------------------------*/
 .reg-body{
-    background-image: url('../assets/classroom.jpg'); 
+    background-image: url('/assets/classroom.jpg'); 
     background-size: cover; 
     background-position: center; 
     height: auto;
@@ -230,7 +230,7 @@ color:rgba(21, 20, 65, 0.9);
 }
 
 .login-container {
-    background-image: url('../assets/lab.jpg'); 
+    background-image: url('/assets/lab.jpg'); 
     background-size: cover;
     background-position: center;
     height: 100vh; 
