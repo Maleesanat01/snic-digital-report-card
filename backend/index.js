@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+import dotenv from 'dotenv';
 const connectDB = require('./config/db');
 const teacherRoutes = require('./routes/teacherRoutes');
 const studentRoutes = require('./routes/studentRoutes');
@@ -8,6 +9,7 @@ const reportRoutes = require('./routes/reportRoutes');
 const authRoutes = require('./routes/authRoutes'); 
 const subjectRoutes = require('./routes/subjectRoutes');
 
+dotenv.config();
 const app = express();
 
 // CORS configuration
