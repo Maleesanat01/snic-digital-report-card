@@ -12,12 +12,22 @@ import subjectRoutes from './routes/subjectRoutes.js';
 dotenv.config();
 const app = express();
 
+// Middleware to set CORS headers on all responses
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  next();
+});
+
 // CORS configuration
 const corsOptions = {
-  origin: 'https://snic-digital-report-card-frontend-app.onrender.com', // Frontend domain
+  origin: '*',  // Allow all origins (for testing)
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
 };
+
 
 app.use(cors(corsOptions)); // Apply CORS middleware
 app.options('*', cors(corsOptions)); // Handle preflight OPTIONS requests
