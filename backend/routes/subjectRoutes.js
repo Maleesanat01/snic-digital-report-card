@@ -1,6 +1,6 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const Subject = require('../models/Subject'); // Import the Subject model
+import Subject from '../models/Subject'; // Import the Subject model
 
 // Get all subjects with their classes
 router.get('/get-subjects', async (req, res) => {
