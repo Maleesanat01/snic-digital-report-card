@@ -71,4 +71,4 @@ router.put('/:id/class-promotion', async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router; 
