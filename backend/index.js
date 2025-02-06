@@ -6,7 +6,7 @@ import connectDB from './config/db.js';
 import teacherRoutes from './routes/teacherRoutes.js';
 import studentRoutes from './routes/studentRoutes.js';
 import reportRoutes from './routes/reportRoutes.js';
-const authRoutes = require('./routes/authRoutes');
+import authRoutes from './routes/authRoutes.js';
 import subjectRoutes from './routes/subjectRoutes.js';
 
 dotenv.config();
