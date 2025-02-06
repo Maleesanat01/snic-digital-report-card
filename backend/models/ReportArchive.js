@@ -1,5 +1,4 @@
-// models/ReportArchive.js
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const ReportArchiveSchema = new mongoose.Schema({
     studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
@@ -25,4 +24,4 @@ const ReportArchiveSchema = new mongoose.Schema({
     ],
 });
 
-module.exports = mongoose.model('ReportArchive', ReportArchiveSchema);
+export default mongoose.model('ReportArchive', ReportArchiveSchema);
