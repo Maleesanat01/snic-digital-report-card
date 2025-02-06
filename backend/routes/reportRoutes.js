@@ -48,7 +48,6 @@ router.get('/existing-reports/:studentId/:semester/:class/:academicYear', async 
     }
 });
 
-
 // Get reports for a specific class and semester
 router.get('/reports-for-class-semester/:class/:semester', async (req, res) => {
     const { class: studentClass, semester } = req.params;
@@ -62,7 +61,7 @@ router.get('/reports-for-class-semester/:class/:semester', async (req, res) => {
     }
 });
 
-//fetch report by id for edit report screen
+// Fetch report by ID for edit report screen
 router.get('/:id', async (req, res) => {
     try {
         const report = await Report.findById(req.params.id).populate('studentId');
@@ -137,7 +136,7 @@ router.put('/:reportId', async (req, res) => {
     }
 });
 
-// principle view report with mark as seen
+// Principle view report with mark as seen
 router.put('/principle-view-reports/:reportId', async (req, res) => {
     const { reportId } = req.params;
     console.log(`Received request to update report with ID: ${reportId}`);
@@ -163,7 +162,7 @@ router.put('/principle-view-reports/:reportId', async (req, res) => {
     }
 });
 
-//Parents mark seen
+// Parents mark seen
 router.put('/parent-mark-seen/:reportId', async (req, res) => {
     const { reportId } = req.params;
     const { seenByParent } = req.body;
@@ -171,7 +170,7 @@ router.put('/parent-mark-seen/:reportId', async (req, res) => {
     try {
         const updatedReport = await Report.findByIdAndUpdate(
             reportId,
-            { seenByParent }, 
+            { seenByParent },
             { new: true, runValidators: true }
         );
 
@@ -186,12 +185,11 @@ router.put('/parent-mark-seen/:reportId', async (req, res) => {
     }
 });
 
-
-//to get past reports for student
+// To get past reports for student
 router.get('/view-student-archive-report/:studentId/:class', async (req, res) => {
     console.log('Received request for archived reports:', req.params);
     const { class: selectedClass } = req.params;
-    const studentId = new mongoose.Types.ObjectId(req.params.studentId); 
+    const studentId = new mongoose.Types.ObjectId(req.params.studentId);
 
     try {
         const reports = await ReportArchive.find({
@@ -209,9 +207,6 @@ router.get('/view-student-archive-report/:studentId/:class', async (req, res) =>
         res.status(500).json({ message: 'Failed to fetch archived reports.' });
     }
 });
-
-
-
 
 // POST route for archiving a report
 router.post('/report-archive', async (req, res) => {
@@ -245,9 +240,6 @@ router.post('/report-archive', async (req, res) => {
     }
 });
 
-
-
-
 // DELETE a report by ID
 router.delete('/:id', async (req, res) => {
     try {
@@ -269,4 +261,4 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-export default router; 
+export default router;
