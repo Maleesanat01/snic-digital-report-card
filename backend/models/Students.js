@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const studentsSchema = new mongoose.Schema({
     userType: { 
@@ -37,4 +37,4 @@ const studentsSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('Students', studentsSchema);
+export default mongoose.model('Students', studentsSchema);
