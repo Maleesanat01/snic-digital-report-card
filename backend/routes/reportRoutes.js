@@ -1,9 +1,9 @@
 import express from 'express';
 import mongoose from 'mongoose'
 const router = express.Router();
-import Report from '../models/Report'
+import Report from '../models/Report.js'
 import ReportArchive from '../models/ReportArchive.js'
-import User from '../models/User'
+import User from '../models/User.js'
 
 // Endpoint to create reports
 router.post('/create-reports', async (req, res) => {
