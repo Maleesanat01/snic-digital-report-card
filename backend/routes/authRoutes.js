@@ -1,11 +1,11 @@
-const express = require('express');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-const Teachers = require('../models/Teachers');
-const Students = require('../models/Students');
-const router = express.Router();
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import User from '../models/User.js';  // Ensure file extension is included
+import Teachers from '../models/Teachers.js';  // Ensure file extension is included
+import Students from '../models/Students.js';  // Ensure file extension is included
 
+const router = express.Router();
 const JWT_SECRET = 'your-secret-key'; // Replace with actual secret key
 
 // Register both teacher and student
@@ -85,8 +85,6 @@ router.post('/register', async (req, res) => {
         res.status(500).json({ message: 'Database error during registration', error: error.message });
     }
 });
-
-
 
 // Login for both teacher and student
 router.post('/login', async (req, res) => {
