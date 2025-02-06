@@ -1,11 +1,12 @@
-const express = require('express');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
-const Teachers = require('../models/Teachers');
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import User from '../models/User.js';  // Ensure file extension is included
+import Teachers from '../models/Teachers.js';  // Ensure file extension is included
+
 const router = express.Router();
 
-//Teacher admission
+// Teacher admission
 router.post('/admission', async (req, res) => {
     const { name, email, staffNumber } = req.body;
     const registeredDate = new Date(); // Get the current date
@@ -34,4 +35,4 @@ router.post('/admission', async (req, res) => {
     }
 });
 
-export default router; 
+export default router;
