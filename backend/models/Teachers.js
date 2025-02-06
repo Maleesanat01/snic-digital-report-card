@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const teachersSchema = new mongoose.Schema({
     userType: { 
@@ -28,7 +28,7 @@ const teachersSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('Teachers', teachersSchema);
+export default mongoose.model('Teachers', teachersSchema);
 
 
   // classTeacher: { 
