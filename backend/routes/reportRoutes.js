@@ -1,9 +1,9 @@
-const express = require('express');
-const mongoose = require('mongoose');
+import express from 'express';
+import mongoose from 'mongoose'
 const router = express.Router();
-const Report = require('../models/Report'); // Adjust the path as needed
-const ReportArchive = require('../models/ReportArchive.js');
-const User = require('../models/User');
+import Report from '../models/Report'
+import ReportArchive from '../models/ReportArchive.js'
+import User from '../models/User'
 
 // Endpoint to create reports
 router.post('/create-reports', async (req, res) => {
