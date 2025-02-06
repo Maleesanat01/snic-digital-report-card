@@ -1,7 +1,7 @@
-const express = require('express');
-const bcrypt = require('bcryptjs');
-const User = require('../models/User');
-const Students = require('../models/Students');
+import express from 'express';
+import bcrypt from 'bcryptjs';
+import User from '../models/User.js';  // Ensure file extension is included
+import Students from '../models/Students.js';
 
 const router = express.Router();
 
