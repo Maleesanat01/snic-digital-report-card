@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 const userSchema = new mongoose.Schema({
     userType: { type: String, enum: ['teacher', 'student', 'principal', 'admin'], required: true },
     name: { type: String, required: true },
@@ -30,5 +30,5 @@ const userSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('User', userSchema);
+export default mongoose.model('User', userSchema);
 
