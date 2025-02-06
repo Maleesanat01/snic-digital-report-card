@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
 const reportSchema = new mongoose.Schema({
     studentId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
@@ -17,5 +17,5 @@ const reportSchema = new mongoose.Schema({
     seenByParent: { type: Boolean, default: false },
 });
 
-const Report = mongoose.model('Report', reportSchema);
-module.exports = Report;
+export default mongoose.model('Report', reportSchema);
+
