@@ -38,6 +38,11 @@ app.use(bodyParser.json()); // Parse JSON request bodies
 // Connect to the database
 connectDB();
 
+// Define root route
+app.get('/', (req, res) => {
+  res.send('API working');
+});
+
 // Register routes
 app.use('/api/auth', authRoutes);
 app.use('/api/teachers', teacherRoutes);
