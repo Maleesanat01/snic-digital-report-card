@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
 import './styling.css';
-const API_BASE_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
+const API_BASE_URL = 'https://api.snicdigitalreport.com/';
 
 
 const PrincipleViewReport = () => {
