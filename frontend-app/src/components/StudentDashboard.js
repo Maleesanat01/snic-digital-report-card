@@ -7,6 +7,8 @@ import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+const API_BASE_URL = 'https://api.snicdigitalreport.com/';
+
 const Dashboard = () => {
     const navigate = useNavigate();
     const [reports, setReports] = useState([]);
