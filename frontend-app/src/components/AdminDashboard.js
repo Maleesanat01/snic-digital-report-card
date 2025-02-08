@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styling.css';
 
-const API_BASE_URL = 'https://snic-digital-report-card-backend.onrender.com/api';
+const API_BASE_URL = 'https://api.snicdigitalreport.com/';
 
 
 const Dashboard = () => {
